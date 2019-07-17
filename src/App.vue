@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="container">
-    <p>Global : {{ $store.state.counter }}</p>
+    <p>Global : {{ $store.getters.doubleCounter }}</p>
     <p><my-result></my-result></p>
     <p><my-button></my-button></p>
   </div>
