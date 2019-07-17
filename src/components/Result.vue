@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="row">
     <div class="col-2">
-      <h1>{{counter}}</h1>
+      <h1>{{ $store.state.counter }}</h1>
     </div>
-    <div class="col-2">
-      <p>Global : {{ doubleCounter }}</p>
+    <div class="col-3">
+      <p>Getter.doubleCounter : {{ doubleCounter }}</p>
     </div>
   </div>
 </template>
@@ -13,8 +13,7 @@
 import { mapGetters } from 'vuex'
 export default {
   computed: mapGetters([
-    'doubleCounter',
-    'counter'
+    'doubleCounter'
   ])
 }
 
