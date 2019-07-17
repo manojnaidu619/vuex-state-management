@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="container">
-    <my-result></my-result>
-    <my-button></my-button>
+    <p>Global : {{ $store.state.counter }}</p>
+    <p><my-result></my-result></p>
+    <p><my-button></my-button></p>
   </div>
 </template>
 
