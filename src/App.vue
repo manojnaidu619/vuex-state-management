@@ -1,28 +1,29 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template lang="html">
+  <div class="container">
+    <my-result></my-result>
+    <my-button></my-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Buttons from './components/Buttons.vue'
+import Result from './components/Result.vue'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    "my-button" : Buttons,
+    "my-result" : Result
+  },
+  methods: {
+    raiseCount(step){
+      this.count += step
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="css" scoped>
+h1{
+  color: red;
 }
 </style>
