@@ -1,17 +1,23 @@
 <template lang="html">
   <div class="row">
-    <h1>{{result}}</h1>
+    <div class="col-2">
+      <h1>{{counter}}</h1>
+    </div>
+    <div class="col-2">
+      <p>Global : {{ doubleCounter }}</p>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  computed: {
-    result(){
-      return this.$store.state.counter
-    }
-  }
+  computed: mapGetters([
+    'doubleCounter',
+    'counter'
+  ])
 }
+
 </script>
 
 <style lang="css" scoped>

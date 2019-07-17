@@ -8,6 +8,9 @@ export const store = new Vuex.Store({
     counter: 0
   },
   getters: {
+    counter(state){
+      return state.counter
+    },
     doubleCounter(state){
       return state.counter * 2
     }
